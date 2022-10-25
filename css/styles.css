@@ -1,0 +1,125 @@
+:root {
+  --color-primary: blue;
+  --color-secondary: #00d9ff;
+  --color-bl: #000;
+  --color-wh: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* come back to this later */
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.header {
+  background: #2584ff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  flex-wrap: wrap;
+  align-items: center ;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--color-wh);
+  align-self: center;
+}
+
+.logo--primary {
+  color: var(--color-primary);
+  font-size: 5rem;
+}
+
+.nav__toggler{
+  fill: var(--color-wh);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.nav.collapsible--expanded .nav__toggler{
+  opacity: 0.5;
+}
+
+.nav__list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.nav ul {
+  margin-top: 0;
+  list-style: none;
+}
+
+.nav__item {
+  padding: 0.5rem 0;
+ 
+}
+
+.nav__item a {
+  color: var(--color-bl);
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.nav__item a:hover {
+  color: var(--color-wh);
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+  .nav__toggler{
+    display: none;
+    
+  }
+
+  .nav__list{
+    width: auto;
+    max-height: 0;
+    display: flex;
+    flex-direction: row;
+    max-height: 100%;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+  
+  .nav__item {
+    padding: 0 0.5rem;
+  }
+  
+}
