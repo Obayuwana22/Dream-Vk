@@ -17,11 +17,20 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-secondary);
+}
+
+h1 {
+  font-size: 6rem;
 }
 
 a {
   text-decoration: none;
+}
+
+.btn{
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  border-radius: 10rem;
 }
 
 /* come back to this later */
@@ -178,4 +187,65 @@ a {
   .quote {
     margin: 0;
   }
+}
+
+/* Hero */
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/pexels-vincent-gerbouin-1174732.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__content {
+  color: var(--color-wh);
+  padding: 0 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero__heading {
+  margin: 0;
+  line-height: 1;
+}
+
+.hero__tagline {
+  margin: 1rem 0 4rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.btn--hero{
+  background: var(--color-secondary);
+  color: var(--color-wh);
+  transition: background 0.3s;
+}
+
+.btn--hero:hover{
+  background:  #00d9ff9f;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5rem;
+  }
+
+  .btn{
+    font-size: 2rem;
+  }
+
+  .hero__tagline{
+    margin: 1rem 0 3rem;
+    font-size: 2rem;
+  }
+  
 }
